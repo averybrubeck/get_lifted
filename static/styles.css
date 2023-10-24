@@ -1,29 +1,30 @@
+body {
+    text-align: center;
+    background: linear-gradient(15.23deg, #141414, #180030);
+    margin: 0;
+    padding: 0;
+}
+ul,
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+h3,
+h1,
+p{
+    color: rgba(255,255,255,.8);
+}
 .message {
     font-weight: 600;
     color: blue;
 }
 .navbar {
-    background-color: lightslategray;
-    font-size: 1em;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: white;
-    padding: 8px 5px 8px 5px;
+    padding: 10px;
+    background-color: black;
 }
 
-.navbar a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.navbar-brand {
-    font-size: 1.2em;
-    font-weight: 600;
-}
-
-.navbar-item {
-    font-variant: small-caps;
-    margin-left: 30px;
-}
 
 .body-content {
     padding: 5px;
