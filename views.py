@@ -14,14 +14,31 @@ def about():
 def contact():
     return render_template("contact.html")
 
-@app.route("/login", methods=["GET", "POST"])
-def login():
+@app.route("/signup/", methods=["GET", "POST"])
+def signup():
     if request.method == "POST":
-        user = request.form["name"]
-        return f"<h1>this worked</h1>"
-    else:
-        return render_template("login.html") 
 
-app.route("/<usr>")
-def user(usr):
-    return f"<h1>{usr}</h1>"  
+        #fix gender dropdown
+        first_name = request.form["first_name"]
+        last_name = request.form["last_name"]
+        email = request.form["email"]
+        email_conrifmation = request.form["email_confirmation"]
+        dob = request.form["birthday"]
+        phone = request.form["phone"]
+        address = request.form["address"]
+        city = request.form["city"]
+        zip_code = request.form["zip"]
+        emergency_contact = request.form["emergency_contact_name"]
+        emergency_contact_number = request.form["emergency_contact_number"]
+        username = request.form["username"]
+        password =  request.form["password"]
+        confirmation = request.form["password_confirmation"]
+
+        if password == confirmation:
+            return f"<h1>this worked</h1>"
+        else: 
+            return render_template("signup.html")
+    else:
+        return render_template("signup.html") 
+
+  

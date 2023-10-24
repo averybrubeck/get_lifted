@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block title %}Signup{% endblock %}
+
+{% block content %}
+<!--fix gender drop down, add country and state drop downs-->
+<form action="/signup" method="post">
+    <input type="text" name="first_name" placeholder="First Name*">
+    <input type="text" name="last_name" placeholder="Last Name*">
+    <input type="text" name="email" placeholder="E-mail*">
+    <input type="text" name="email_confirmation" placeholder="Verify E-mail*">
+    <input type="date" id="birthday" name="birthday" placeholder="date of birth">
+    <select name="gender">
+        <option value="" disabled selected>Gender*</option>
+        <option value="male">Male</option>
+        <option value="femail">Female</option>
+        <option value="na">Not Specified</option>
+    </select>
+    <input type="number" name="phone" placeholder="Contact Number*">
+    <input type="text" name="name" placeholder="name">
+    <input type="text" name="address" placeholder="Address*">
+    <input type="text" name="city" placeholder="City*">
+    <input type="text" name="name" placeholder="name">
+    <input type="number" name="zip" placeholder="Zip Code*">
+    <input type="text" name="emergency_contact_name" placeholder="Emergency Contact*">
+    <input type="number" name="emergency_contact_number" placeholder="Emergency Conact Number*">
+    <input type="text" name="username" placeholder="Username*">
+    <input type="text" name="password" placeholder="Password*">
+    <input type="text" name="password_confirmation" placeholder="Confirm Password*">
+    <input type="submit" value="submit">
+</form>
+{% endblock %}
