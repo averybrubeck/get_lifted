@@ -52,6 +52,10 @@ def login():
     else:
         return render_template("login.html") 
 
+
+
 @app.route("/user/<name>")
 def user(name):
-    return "<h1>Hello, {}!".format(name)
+        user_agent = request.headers.get("User-Agent")
+        return "<p>Your user agent is {}</P>".format(user_agent), "<h1>Hello, {}!".format(name)
+    
