@@ -18,15 +18,17 @@ def contact():
 def signup():
     if request.method == "POST":
 
-        #fix gender dropdown
         first_name = request.form["first_name"]
         last_name = request.form["last_name"]
         email = request.form["email"]
         email_conrifmation = request.form["email_confirmation"]
         dob = request.form["birthday"]
+        gender = request.form["gender"]
         phone = request.form["phone"]
+        country = request.form["country"]
         address = request.form["address"]
         city = request.form["city"]
+        state = request.form["state"]
         zip_code = request.form["zip"]
         emergency_contact = request.form["emergency_contact_name"]
         emergency_contact_number = request.form["emergency_contact_number"]
@@ -34,7 +36,7 @@ def signup():
         password =  request.form["password"]
         confirmation = request.form["password_confirmation"]
 
-        if password == confirmation:
+        if password == confirmation and email == email_conrifmation:
             return f"<h1>this worked</h1>"
         else: 
             return render_template("signup.html")

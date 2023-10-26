@@ -2,7 +2,6 @@
 {% block title %}Signup{% endblock %}
 
 {% block content %}
-<!--fix gender drop down, add country and state drop downs-->
 <form action="/signup" method="post">
     <input type="text" name="first_name" placeholder="First Name*">
     <input type="text" name="last_name" placeholder="Last Name*">
@@ -17,11 +16,13 @@
     </select>
     <input type="number" name="phone" placeholder="Contact Number*">
     <select name="country">
-        <option value="United States" selected></option>
+        <option value="" disabled selected>Country*</option>
+        <option value="United States">United States</option>
     </select>
     <input type="text" name="address" placeholder="Address*">
     <input type="text" name="city" placeholder="City*">
     <select id="state" name="state">
+        <option value="" disabled selected>State*</option>
         <option value="AL">Alabama</option>
         <option value="AK">Alaska</option>
         <option value="AZ">Arizona</option>
