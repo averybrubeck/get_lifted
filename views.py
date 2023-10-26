@@ -2,7 +2,7 @@ from flask import Flask, render_template, url_for, redirect, request
 from werkzeug.security import check_password_hash, generate_password_hash
 from . import app
 import sqlalchemy
-
+# run in terminal to activate virtual enviorment venv\Scripts\activate
 @app.route("/")
 def home():
     return render_template("home.html")
@@ -51,3 +51,7 @@ def login():
         return render_template("login.html")
     else:
         return render_template("login.html") 
+
+@app.route("/user/<name>")
+def user(name):
+    return "<h1>Hello, {}!".format(name)
