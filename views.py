@@ -1,4 +1,5 @@
 from flask import Flask, render_template, url_for, redirect, request
+from werkzeug.security import check_password_hash, generate_password_hash
 from . import app
 import sqlalchemy
 
@@ -37,6 +38,7 @@ def signup():
         confirmation = request.form["password_confirmation"]
 
         if password == confirmation and email == email_conrifmation:
+            #do the sql stuff
             return f"<h1>this worked</h1>"
         else: 
             return render_template("signup.html")
